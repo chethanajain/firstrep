@@ -1,0 +1,27 @@
+{
+  "name": "udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:dashboard": "cypress run --record --key 0819b626-a79d-4d9d-a831-f7f2ab6a90d3",
+    "cypress:headed": "node_modules\\.bin\\cypress run",
+    "recorddashboard": "npm cypress:headed",
+    "headedtest": "npm run cypress:headed -- --headed",
+    "GreenkartTest": "npm run cypress:headed -- --spec \"cypress/integration/GreenKart/*\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "author": "chetana",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.2.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1"
+  }
+}
